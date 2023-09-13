@@ -3,15 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Queenie</title>
+    <style>
+        body{
+            margin:30px;
+        }
+        .grid-container{
+            max-width: 900px;
+            background-color:lightblue;
+            display: grid;
+            grid-template-columns:repeat(6, 1fr);
+            margin:0, auto;
+            gap:10px;
+            grid-template-rows: 300px;
+        
+        }
+        .grid-container div{
+            border:1px  solid gray;
+            padding:20px;
+            text-align: center;
+            background-color: aliceblue;
+        }
+        .grid-container > div:nth-child(1) {
+            grid-column: 1 / span 2;
+        }
+        .grid-container > div:nth-child(2) {
+            grid-column: span 3;
+        }
+        .grid-container > div:nth-child(3) {
+            grid-column: span 1;
+        }
+        .grid-container > div:nth-child(4) {
+            grid-column: 2/ span 6;
+        }
+        .grid-container > div:nth-child(5) {
+            grid-column: span 3;
+        }
+        .grid-container > div:nth-child(6) {
+            grid-column: span 3;
+        }
 
-<style>
-    p{
-    color: orange;
-    }
-</style>
+
+
+    
+
+    </style>
 </head>
 <body>
-    <P>Hello World!! </P>
-/body>
+    <div class="grid-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+
+    
+</body>
 </html>
